@@ -1,0 +1,343 @@
+@font-face {
+    font-family: karantina;
+    src: url("assets/font/Karantina-Light.ttf");
+    font-weight: 100;
+}
+@font-face {
+    font-family: karantina-bold;
+    src: url("assets/font/Karantina-Bold.ttf");
+}
+
+@font-face {
+    font-family: Assistant;
+    src: url("assets/font/Assistant-Light.ttf");
+}
+
+@font-face {
+    font-family: Guttman;
+    src: url("assets/font/Guttman\ Yad-Brush.ttf");
+}
+
+* {
+    font-family: Assistant;
+
+    /* font-family: Guttman; */
+    /* overflow: hidden !important; */
+}
+
+body {
+    font-family: Assistant;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;   
+    background-image: url("assets/media/main_background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    direction: rtl;
+    color: white;
+    overflow: hidden;
+}
+
+/* טוען */
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f45d;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.loader > img {
+    width: 50vw;
+}
+
+.loader.fade {
+    animation: fadeOut 1s 2s forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.logo {
+    visibility: hidden;
+    width: 12vw;
+    /* height: 7vh; */
+}
+
+#odot-logo2 {
+    visibility: hidden;
+}
+
+.header {
+    top: 2.5vh;
+    position: absolute;
+    width: 88%;
+    height: fit-content;
+    margin: 0px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    right: 5%;
+}
+
+
+.div-body, .body-odot {
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    height: 90vh;
+    overflow: scroll;
+}
+
+
+/* אודות */
+.odot-logo {
+    width: 8vw;
+}
+
+.div-odot {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.p-odot {
+    margin: 0.5em;
+    font-family: assistant;
+}
+
+.div-p-odot {
+    font-family: Assistant;
+    font-size: 1.2em;
+}
+
+.till-logo {
+    width: 23vW;
+    height: auto;
+}
+
+.div-background-middle {
+    background-image: url("assets/media/full_chalkboard.svg");
+}
+
+.div-middle {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 0em;
+    margin-top: 2em;
+    justify-content: space-around;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    padding-right: 1em;
+}
+
+.back-button {
+    position: absolute;
+    right: 2vh;
+    bottom: 12vh;
+    width: 21vw;
+}
+
+/* דף פתיחה */
+
+.p-title {
+    font-family: karantina-bold;
+    /* font-family: Guttman; */
+    text-align: center;
+    /* font-size: 1.7em; */
+    font-size: 2.5em;
+    margin: 0;
+    /* color: black; */
+}
+
+.div-rules {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.img-checkList { 
+    width: 6vw;
+    margin: 0.5em;
+}
+
+.check-button {
+    display: none;
+    position: absolute;
+    left: 10vw;
+    width: 23vw;
+    /* height: fit-content; */
+    font-size: 1.8em;
+    font-family: karantina-bold;
+    bottom: 12vh;
+}
+
+.div-check {
+    display: none;
+    background-image: url("assets/media/full_chalkboard.svg");
+    background-repeat: no-repeat;
+    height: 32vh;
+    background-size: 100% 100%;
+    margin: 0em;
+    position: absolute;
+    top: 5vh;
+    flex-direction: column;
+    align-items: center;
+    width: 98vw;
+    right: 1vw;
+    justify-content: center;
+    font-size: 2.2em;
+}
+
+.try-again {
+    display: none;
+    position: absolute;
+    right: 3vh;
+    bottom: 12vh;
+    width: 22vw;
+}
+
+.h-div-check {
+    text-align: center;
+    font-size: 1em;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-top: 0px;
+}
+
+.next {
+    display: none;
+    position: absolute;
+    left: 10vw;
+    width: 23vw;
+    /* height: fit-content; */
+    font-size: 1.8em;
+    bottom: 12vh;
+}
+
+.div-chalkboard {
+    background-image: url(assets/media/full_chalkboard_liglol.svg);
+    background-repeat: no-repeat;
+    height: 32vh;
+    background-size: 100% 100%;
+    /* overflow: scroll; */
+    margin: 0em;
+    position: relative;
+    top: 5vh;
+    width: 98vw;
+    right: 1vw;
+}
+
+.div-checkList {
+    width: 90vw;
+    position: absolute;
+    right: 5vw;
+    /* border: solid; */
+    /* margin-top: 1em; */
+    height: 24vh;
+    overflow: scroll;
+    top: 2vh;
+}
+/* drop-page */
+
+.drop-page {
+    display: none;
+}
+
+/* sort to groups */
+.dropContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-image: url(assets/media/drop_board.svg);
+    width: 96vw;
+    position: relative;
+    right: 2vw;
+    height: fit-content;
+}
+
+.drop {
+    /* background-color: #0b3b8c; */
+    border-radius: 16px;
+    width: 88vw;
+    height: 50vh;
+    margin: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    /* margin-bottom: 2.8em; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* .p-groups {
+    margin: 1em;
+} */
+
+.dragContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.drag {
+    background-image: url(assets/media/answer_box.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background-color: #0b3b8c; */
+    width: fit-content;
+    height: 6vh;
+    text-align: center;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Assistant;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+
+/* finish page*/
+
+.finish-page {
+    display: none;
+}
+
+.div-finish-text {
+    background-image: url(assets/media/full_chalkboard.svg);
+    background-repeat: no-repeat;
+    height: 32vh;
+    background-size: 100% 100%;
+    /* overflow: scroll; */
+    margin: 0em;
+    position: relative;
+    top: 5vh;
+    width: 98vw;
+    right: 1vw;
+}
+
+.chalkboard-finish {
+    width: 90vw;
+    position: absolute;
+    height: 24vh;
+    top: 2vh;
+    right: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
