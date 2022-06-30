@@ -42,7 +42,8 @@ let DATA = {
         },
     ],
      // sort to groups
-     "sortToGroups": [
+     "sortToGroups": {
+         drag: [
         {
             drag: "קבוצה 3",
             group: 3
@@ -75,5 +76,6 @@ let DATA = {
             drag: "קבוצה 2",
             group: 2
         },
-    ]
+    ],
+drop: ["קבוצה 1", "קבוצה 2", "קבוצה 3"] }
 }

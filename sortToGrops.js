@@ -3,7 +3,7 @@ let drag;
 let drop;
 let nDragRight = 0;
 // const
-const ARR_GROUPS = [`קבוצה 1`, `קבוצה 2`, `קבוצה 3`];
+const ARR_GROUPS = DATA.sortToGroups.drop;
 
 /* createItems
 --------------------------------------------------------------
@@ -11,7 +11,7 @@ Description: */
 const createItems = () => {
     setDrag();
     setDrop();
-    let data = shuffle(DATA.sortToGroups);
+    let data = shuffle(DATA.sortToGroups.drag);
     // create drop
     let dropContainer = El("div", {cls: `dropContainer`});
     document.querySelector(`.sortToGroupsContainer`).append(dropContainer);
@@ -25,7 +25,7 @@ const createItems = () => {
     // create drag
     let dragContainer = El("div", {cls: `dragContainer`});
     document.querySelector(`.sortToGroupsContainer`).append(dragContainer);
-    for(let i = 0; i < DATA.sortToGroups.length; i++){
+    for(let i = 0; i < DATA.sortToGroups.drag.length; i++){
         let dragItem = El("div", {cls: `drag`, attributes: {"data-num": `${data[i].group}`, draggable: "true"}}, data[i].drag);
         document.querySelector(`.dragContainer`).append(dragItem);
     }
@@ -79,7 +79,7 @@ onDrop = () => {
         drag.setAttribute("draggable", "false");
         nDragRight++
         // debugger;
-        if (nDragRight === DATA.sortToGroups.length * 2) {
+        if (nDragRight === DATA.sortToGroups.drag.length * 2) {
             setTimeout(finishPage,2000);
             // finishPage();
         }

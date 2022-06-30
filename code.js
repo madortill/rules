@@ -127,7 +127,7 @@ let dropPage = () => {
     setDrag();
     setDrop();
     createItems();
-    shuffle(DATA.sortToGroups);
+    shuffle(DATA.sortToGroups.drag);
 }
 
 let shuffle = (arr) => {
