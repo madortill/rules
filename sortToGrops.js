@@ -5,6 +5,7 @@ let nDragRight = 0;
 // const
 const ARR_GROUPS = DATA.sortToGroups.drop;
 
+let blAnimation = true;
 /* createItems
 --------------------------------------------------------------
 Description: */
@@ -85,10 +86,17 @@ onDrop = () => {
         }
     } else {
         drag.style.cssText = "background-image: url(assets/media/wrong_box.svg);";  
-        // mistake();
+        if(blAnimation) {
+            mistake();
+            blAnimation = false;
+        }
     }
 }
 
-// let mistake = () => {
-//     document.querySelector(`.div-mistake`).classList.add("animation");
-// }
+let mistake = () => {
+    document.querySelector(`.div-message`).style.display = "block";
+    document.querySelector(`.div-message`).classList.add("animate-fading");
+    document.querySelector(`.div-message`).addEventListener(`animationend`, () => {
+        document.querySelector(`.div-message`).style.display = "none";
+    })
+}
