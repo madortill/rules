@@ -232,7 +232,7 @@ body {
 }
 
 .div-chalkboard {
-    background-image: url(assets/media/full_chalkboard_liglol.svg);
+    background-image: url(assets/media/full_chalkboard.svg);
     background-repeat: no-repeat;
     height: 32vh;
     background-size: 100% 100%;
@@ -248,17 +248,59 @@ body {
     width: 90vw;
     position: absolute;
     right: 5vw;
-    /* border: solid; */
-    /* margin-top: 1em; */
     height: 24vh;
     overflow: scroll;
     top: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-rules {
+    height: 2.3vh;
 }
 /* drop-page */
 
 .drop-page {
     display: none;
 }
+
+.message {
+    background-color: #a56734;
+    width: 70vw;
+    height: 14vh;
+    position: absolute;
+    top: 25vh;
+    left: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 26px;
+    text-align: center;
+}
+
+.div-message {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000008a;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.animate-fading {
+    animation: fading 3s
+}
+
+@keyframes fading{
+    0% {opacity: 0}
+    40% {opacity: 1}
+    60% {opacity: 1}
+    100% {opacity:0}}
 
 /* sort to groups */
 .dropContainer{
