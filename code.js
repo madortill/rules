@@ -33,14 +33,10 @@ let addCheckList = () => {
     for (let i = 0; i < DATA.rules.length; i++) {
         let item = El("div", {cls: `div-rules`},
         El("img",{attributes: {class: `img-checkList`, id : `img${i}`, src : `assets/media/check_box.svg`, alt : `V`}, listeners : {click : mark}},),
-        El("p",{cls: `title-rules`}, DATA.rules[i][`rule`]),            
+        El("img",{attributes: {class: `title-rules`, src : `assets/media/${i + 1}.svg`, alt : `rules${i + 1}`}}),           
         );
         document.querySelector(`.div-checkList`).append(item);
     }
-    // const btn = document.createElement("button");
-    // btn.innerHTML = "בדוק";
-    // btn.id = "btn"
-    // document.querySelector(`.checkList`).appendChild(btn);
 }
 
 let El = (tagName, options = {}, ...children) => {
@@ -102,7 +98,6 @@ let check = () => {
         srtTitle = "כל הכבוד!";
         document.querySelector(`.p-title`).innerHTML = srtTitle;
         document.querySelector(`.h-div-check`).style.fontSize = "0.5em"
-        // document.querySelector(`.p-title`).style.display = "none";
         document.querySelector(`.next`).style.display = "block";
         document.querySelector(`.next`).addEventListener("click", dropPage);
     } else {
