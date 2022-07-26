@@ -1,43 +1,43 @@
 let DATA = {
     "rules": [
         {
-            rule : "חוק 1",
+            // חוק 1
             ans: false
         },
         {
-            rule : "חוק 2 - נכון",
+            // חוק 2
             ans: true
         },
         {
-            rule : "חוק 3",
+            // חוק 3
             ans: false
         },
         {
-            rule : "חוק 4",
+            // חוק 4
             ans: false
         },
         {
-            rule : "חוק 5",
+            // חוק 5
             ans: false
         },
         {
-            rule : "חוק 6",
+            // חוק 6
             ans: false
         },
         {
-            rule : "חוק 7",
+            // חוק 7
             ans: false
         },
         {
-            rule : "חוק 8 - נכון",
+            // חוק 8
             ans: true
         },
         {
-            rule : "חוק 9 - נכון",
+            // חוק 9
             ans: true
         },
         {
-            rule : "חוק 10",
+            // חוק 10
             ans: false
         },
     ],
