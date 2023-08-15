@@ -107,6 +107,7 @@ body {
 /* אודות */
 .odot-logo {
     width: 8vw;
+    transform: rotate(180deg);
 }
 
 .div-odot {
@@ -260,6 +261,7 @@ body {
 
 .title-rules {
     height: 2.3vh;
+    width: 4vw;
 }
 /* drop-page */
 
